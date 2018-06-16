@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  var prevScrollpos = window.pageYOffset;
   $(".btn").click(function(){
     id = $(this).attr('value');
     $('.article-summary').hide();
@@ -10,6 +11,17 @@ $(document).ready(function(){
     $(".back").show();
   }
     );
+  if ($(window).width() <= 380) {  
+        $(".navbar-brand").hide();
+        $(".jumbotron").show();
+        $(".jumbotron").css("width",$(window).width());
+        $(".slide-left").addClass("slideanim-left");
+        $(".slide-left").removeClass("slide-left");
+        $(".slide").addClass("slideanim");
+        $(".slide").removeClass("slide");
+        $(".bg").removeClass("bg");
+}
+
 
   $(".back").click(function(){
      $(window).scrollTop(0);
@@ -20,6 +32,13 @@ $(document).ready(function(){
 
     var i = 1;
   $(window).scroll(function() {
+    var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
 
