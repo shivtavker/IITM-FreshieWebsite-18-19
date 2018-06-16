@@ -19,32 +19,35 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top" id='navbar'> 
       <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle col-xs-2 col-xs-offset-10" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span> 
             </button>
-            <a class="navbar-brand" href="../index.html">Indian Institute Of Technology Madras</a>
+            <a class='navbar-brand' href="../index.html">Indian Institute Of Technology Madras</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="about_us.html">About Us</a></li>
               <li><a href="courses.html">Courses</a></li>
               <li><a href="placements.html">Placements</a></li>
-              <li><a href="articles.html">Alumni Insight</a></li> 
-              <li class="active"><a href="scholarships.html">Scholarships</a></li>
-              <li><a href="guide.html">Guide</a></li> 
+              <li><a href="articles.html">Alumni Insight</a></li>
+              <li class='active'><a href="scholarships.html">Scholarships</a></li> 
+              <li><a href="guide.html">Guide</a></li>
             </ul>
         </div>
       </div>
   </nav>
+  <div class='jumbotron text-center'>
+    <a href="../index.html">Indian Institute Of Technology Madras</a>
+  </div>
 
   <div class='container-fluid' id='courses' style='color:black!important;'>
     <div class="shadow-lg bg-white">
-
+      <div class='table-responsive'>
         <table class='table table-striped slide'>
           <thead>
             <td><strong>S.NO</strong></td>
@@ -335,11 +338,20 @@ annum per student.</td>
             </tr>
           </tbody>
         </table>
-
+</div>
     </div>
   </div>
-<div class="footer">
-  <div class='navbar-brand'>© Copyright Institute Webops</div>
-</div>
+<footer>
+  © Copyright Institute Webops
+</footer>
+<script>
+  $(document).ready(function(){
+    if ($(window).width() <= 380) {  
+        $(".navbar-brand").hide();
+        $(".jumbotron").show();
+        $(".jumbotron").css("width",$(window).width());
+}
+  })
+</script>
 </body>
 </html>

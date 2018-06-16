@@ -19,28 +19,31 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-  		<div class="container-fluid">
-    		<div class="navbar-header">
-      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span> 
-      			</button>
-      			<a class="navbar-brand" href="../index.html">Indian Institute Of Technology Madras</a>
-    		</div>
-   			<div class="collapse navbar-collapse" id="myNavbar">
-      			<ul class="nav navbar-nav navbar-right">
-        			<li class="active"><a href="about_us.html">About Us</a></li>
-        			<li><a href="courses.html">Courses</a></li>
-          		<li><a href="placements.html">Placements</a></li>
-              <li><a href="articles.html">Alumni Insight</a></li> 
-        			<li><a href="scholarships.html">Scholarships</a></li> 
+  <nav class="navbar navbar-inverse navbar-fixed-top" id='navbar'> 
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle col-xs-2 col-xs-offset-10" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+            <a class='navbar-brand' href="../index.html">Indian Institute Of Technology Madras</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li  class='active'><a href="about_us.html">About Us</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="placements.html">Placements</a></li>
+              <li><a href="articles.html">Alumni Insight</a></li>
+              <li><a href="scholarships.html">Scholarships</a></li> 
               <li><a href="guide.html">Guide</a></li>
-      			</ul>
-    		</div>
-  		</div>
-	</nav>
+            </ul>
+        </div>
+      </div>
+  </nav>
+  <div class='jumbotron text-center'>
+    <a href="../index.html">Indian Institute Of Technology Madras</a>
+  </div>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
   		<!-- Indicators -->
   		<ol class="carousel-indicators">
@@ -83,7 +86,7 @@
     			<img src="../img/slider/3.jpg" alt="Prakriti">
       			<div class="carousel-caption">
         			<h1><strong>Prakriti</strong></h1>
-                    <h3>The Wildlife Club of IIT Madras, founded by a group of wildlife enthusiasts comprising of students, faculty, residents and alumni of IIT Madras. The formation of the club was spurred by a growing recognition of the need to protect the unique biodiversity of the IIT Madras campus.
+                    <h3>The Wildlife Club of IIT Madras, founded by a group of wildlife enthusiasts comprising of students, faculty, residents and alumni of IIT Madras.
                  		<a class="slider_btn" href="http://hsb.iitm.ac.in/~prakriti/">
                  			<button type="button" class="btn btn-success">
         						Know More
@@ -97,7 +100,7 @@
       			<img src="../img/slider/4.png" alt="Shaastra">
       			<div class="carousel-caption"  id='shaastra'>
         			<h1><strong>Shaastra</strong></h1>
-                    <h3>Shaastra is the annual technical festival of the Indian Institute of Technology Madras (IITM), Chennai, India. The festival consists of various engineering, science and technology competitions, summits, lectures, video conferences, exhibitions, demonstrations and workshops.
+                    <h3>Shaastra is the annual technical festival of the Indian Institute of Technology Madras (IITM).
                     	<a class="slider_btn" href="https://www.facebook.com/Shaastra/">	
                     		<button type="button" class="btn btn-default">
         						Know More
@@ -142,7 +145,7 @@
 				<br><br><br>
 				<img src='../img/about.jpg' id='about-img'>
 			</div>
-			<div class='col-lg-6 col-sm-6'>
+			<div class='col-lg-6 col-sm-6 col-xs-12'>
 				
 				<div id='about-header'>
 					<i class="glyphicon glyphicon-globe"></i>
@@ -160,7 +163,11 @@
 			    </div>
 			    <br><br>
          <div class='row  slideanim'>
-			<div class='col-lg-6 col-sm-6'>
+          <div class='col-lg-6 col-sm-6 col-lg-push-6'>
+                  <br><br>
+            <img src='../img/nirf.jpg' id='about-img'>
+          </div>
+			<div class='col-lg-6 col-sm-6 col-lg-pull-6'>
 				
 				<div id='nirf-header'>
 					<i class="glyphicon glyphicon-star"></i>
@@ -175,10 +182,7 @@
         			</a>
         		</div>
         	</div>
-           			<div class='col-lg-6 col-sm-6'>
-           				<br><br>
-						<img src='../img/nirf.jpg' id='about-img'>
-					</div>
+           			
 				</div>
 				<br><br><br>
 				<div class='row  slideanim'>
@@ -250,11 +254,13 @@
 
 			    </div>
 
-          <div class="footer">
-  <div class='navbar-brand'>© Copyright Institute Webops</div>
-</div>
+  <footer>
+  © Copyright Institute Webops
+</footer>
+
  <script>
 $(document).ready(function(){
+  var prevScrollpos = window.pageYOffset;
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
@@ -264,7 +270,30 @@ $(document).ready(function(){
           $(this).addClass("slide");
         }
     });
+
+    var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
   });
+
+  if ($(window).width() <= 380) {  
+        $(".navbar-brand").hide();
+        $(".jumbotron").show();
+        $(".jumbotron").css("width",$(window).width());
+}
+
 })
 </script>
 </body>

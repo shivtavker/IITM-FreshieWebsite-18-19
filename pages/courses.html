@@ -21,20 +21,20 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top" id='navbar'> 
       <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle col-xs-2 col-xs-offset-10" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span> 
             </button>
-            <a class="navbar-brand" href="../index.html">Indian Institute Of Technology Madras</a>
+            <a class='navbar-brand' href="../index.html">Indian Institute Of Technology Madras</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="about_us.html">About Us</a></li>
-              <li class="active"><a href="courses.html">Courses</a></li>
+              <li class='active'><a href="courses.html">Courses</a></li>
               <li><a href="placements.html">Placements</a></li>
               <li><a href="articles.html">Alumni Insight</a></li>
               <li><a href="scholarships.html">Scholarships</a></li> 
@@ -43,6 +43,9 @@
         </div>
       </div>
   </nav>
+  <div class='jumbotron text-center'>
+    <a href="../index.html">Indian Institute Of Technology Madras</a>
+  </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -64,7 +67,7 @@
             <img src="../img/courses/me.jpg" alt="mech">
             <div class="carousel-caption">
               <h1><strong>Mechanical Engineering</strong></h1>
-              <h3>Mechanical engineering, perhaps the broadest and most diverse of engineering disciplines, provides an excellent opportunity for careers not only in engineering, but also in many other inter-disciplinary fields. At IIT Madras, the wide-ranging and fully accredited undergraduate and graduate programmes aim at developing creativity, practical and transferrable skills as well as intellect. This keeps our graduates in strong demand from a broad spectrum of industrial, government and commercial organizations.
+              <h3>Mechanical engineering, perhaps the broadest and most diverse of engineering disciplines, provides an excellent opportunity for careers not only in engineering, but also in many other inter-disciplinary fields.
               <a href='https://mech.iitm.ac.in/meiitm/'><button type="button" class="btn btn-danger">Know More</button></a>
             </h3>
             </div>
@@ -75,7 +78,6 @@
             <div class="carousel-caption">
               <h1><strong>Physics and Engineering Physics</strong></h1>
                     <h3>The Department of Physics -- set in the sylvan campus of IIT Madras -- conducts research in many frontier areas. These areas include experimental solid state physics, optical and laser physics, and various aspects of theoretical and computational physics ranging from condensed matter to string theory and cosmology.
-                    The Department conducts programs at the Bachelor's, Master's as well as at the Doctoral Research levels. We conduct a vibrant undergraduate program -- Bachelor of Technology (B.Tech.) in 'Engineering Physics'-- in conjunction with the Department of Electrical Engineering.
                     <a class="slider_btn" href="https://physics.iitm.ac.in/">
                       <button type="button" class="btn btn-success">
                     Know More
@@ -88,8 +90,8 @@
         <div class="item">
             <img src="../img/courses/elec.gif" alt="elec">
             <div class="carousel-caption">
-              <h1><strong>Electrical Engineering</strong></h1>
-              <h3>Research activities in the Department of Electrical Engineering are in three ways, academic, sponsored and Research Based Industrial Consultancy (RBIC). The latter two are mainly utilized to upgrade laboratory research equipment and facilities. Research projects worth nearly 18 Crore Rupees have been undertaken by our faculty in the last 6-7 years. There are four major groups in the department: (a) Communications, (b) Microelectronics and VLSI, (c) Power Electronics, Control, Robotics and Instrumentation and (d) Power systems and high voltage engineering.
+              <h1><strong>Electrical Engineering<br></strong></h1>
+              <h3>Research activities in the Department of Electrical Engineering are in three ways, academic, sponsored and Research Based Industrial Consultancy (RBIC). The latter two are mainly utilized to upgrade laboratory research equipment and facilities.
                 <a class="slider_btn" href="http://www.ee.iitm.ac.in/">
                   <button type="button" class="btn btn-primary">
                     Know More
@@ -104,8 +106,7 @@
             <img src="../img/courses/com.jpg" alt="com">
             <div class="carousel-caption">
               <h1><strong>Computer Science & Engineering</strong></h1>
-              <h3>Global Excellence and Local Relevance in research, teaching, and technology development is the vision of the Department. The Department was started as the Computer Centre in 1973 with the acquisition of an IBM 370, perhaps the most powerful computer in India at that time. It offered M.Tech, M.S and PhD degree programmes. In 1983, the B.Tech degree programme was started. 
-            Today the Department has a vibrant student body numbering about 700. Over 60% are postgraduate, mostly supported by scholarships.
+              <h3>Global Excellence and Local Relevance in research, teaching, and technology development is the vision of the Department. The Department was started as the Computer Centre in 1973 with the acquisition of an IBM 370, perhaps the most powerful computer in India at that time.
               <a href='https://www.cse.iitm.ac.in/'><button type="button" class="btn btn-danger">Know More</button></a>
             </h3>
             </div>
@@ -115,13 +116,13 @@
             <img src="../img/courses/civ.jpg" alt="civil">
             <div class="carousel-caption">
               <h1><strong>Civil Engineering</strong></h1>
-                    <h4>The Civil Engineering Association (CEA) of IIT Madras is a non-profit organisation within the department with all the activities being coordinated by the students along with the guidance of the professors. It brings together corporates, industry professionals, professors, alumni and students from all over the country and abroad. The organisation is one of the most active Civil Engineering Associations in India. Major CEA activities include Lecture Series by distinguished practitioners of the profession, Workshops and course related events like Modelling, Concrete Challenge,
+                    <h3><br><br>The Civil Engineering Association (CEA) of IIT Madras is a non-profit organisation within the department with all the activities being coordinated by the students along with the guidance of the professors. It brings together corporates, industry professionals, professors, alumni and students from all over the country and abroad.
                       <a class="slider_btn" href="https://ceaiitm.org/2018/main/index.php">   
                         <button type="button" class="btn btn-primary">
                     Know More
                   </button>
                       </a>
-                    </h4>
+                    </h3>
             </div>
         </div>
 
@@ -130,8 +131,7 @@
             <img src="../img/courses/be.jpg" alt="be">
             <div class="carousel-caption">
               <h1><strong>Bio Technology</strong></h1>
-                    <h3>The Department of Biotechnology at IIT Madras was founded in 2004 with a vision to be recognized as a Department of International repute with a strong interdisciplinary research and teaching base in biological sciences and engineering and an active collaboration with industries and health-care institutions. The department is housed in the ‘Bhupat and Jyoti Mehta School of Biosciences’. Currently the department has 31 faculty members, about 235 under graduate students, 186 Ph.D. and 20 M.S. Research Scholars, associated staff and Adjunct Faculty.
-                    These are exciting and challenging times for Biotechnologists.
+                    <h3><br><br>The Department of Biotechnology at IIT Madras was founded in 2004 with a vision to be recognized as a Department of International repute with a strong interdisciplinary research and teaching base in biological sciences and engineering and an active collaboration with industries and health-care institutions.
                       <a class="slider_btn" href="http://biotech.iitm.ac.in/">  
                         <button type="button" class="btn btn-success">
                     Know More
@@ -145,7 +145,7 @@
             <img src="../img/courses/ae.jpg" alt="aero">
             <div class="carousel-caption">
               <h1><strong>Aerospace Engineering</strong></h1>
-              <h3>The Department of Aerospace Engineering at the Indian Institute of Technology Madras (IITM) was established in 1969. Since then it has been in the forefont of fundamental and applied research & development with scientific and social impact in the country. The department has been involved in activities supporting our national ambitions in the field of Aerospace Engineering. Continued interaction with R&D agencies of international repute in the field of aerospace engineering has led to mutually beneficial research activities. 
+              <h3><br><br>The Department of Aerospace Engineering at the Indian Institute of Technology Madras (IITM) was established in 1969. Since then it has been in the forefont of fundamental and applied research & development with scientific and social impact in the country.
 
                 <a class="slider_btn" href="http://www.ae.iitm.ac.in/index.htm">
                   <button type="button" class="btn btn-primary">
@@ -161,7 +161,7 @@
           <img src="../img/courses/che.jpg" alt="chem">
             <div class="carousel-caption">
               <h1><strong>Chemical Engineering</strong></h1>
-                    <h3>The Department’s vision is to be a global centre of academic and research excellence in Chemical Engineering Sciences and Technology, where knowledge is vigorously and meticulously pursued and disseminated, application to industry and society is valued, free thinking is encouraged, intellectual rigour is demanded and thoroughness is rewarded. We are in the process of establishing world class research facilities and research groups in specific areas of energy, environment and materials.
+                    <h3><br><br>The Department’s vision is to be a global centre of academic and research excellence in Chemical Engineering Sciences and Technology, where knowledge is vigorously and meticulously pursued and disseminated, application to industry and society is valued.
                     <a class="slider_btn" href="https://che.iitm.ac.in/">
                       <button type="button" class="btn btn-success">
                     Know More
@@ -182,7 +182,7 @@
             <img src="../img/courses/mme.jpg" alt="mme">
             <div class="carousel-caption">
               <h1><strong>Metallurgical & Material Engineering</strong></h1>
-                    <h3>The Department of Metallurgical and Materials was established in 1959 as Department of Metallurgy and was renamed as Department of Metallurgical and Materials Engineering in 2003. The department has 30 dynamic faculty members, with their teaching, research and consultancy activities in various areas ranging from conventional metallurgy to frontiers of materials science. The department offers B.Tech, M.Tech, M.S and PhD degrees. The department continues to strive for excellence and realising its vision of becoming a leading department in the country for teaching, research and consultancy in the emerging areas of material science and engineering while consolidating its strength in traditional areas of metallurgical engineering. For more details please browse the dept. brochure. 
+                    <h3>The Department of Metallurgical and Materials was established in 1959 as Department of Metallurgy and was renamed as Department of Metallurgical and Materials Engineering in 2003. The department has 30 dynamic faculty members, with their teaching.
                       <a class="slider_btn" href="https://mme.iitm.ac.in/">  
                         <button type="button" class="btn btn-success">
                     Know More
@@ -195,7 +195,7 @@
             <img src="../img/courses/nav.jpg" alt="nav">
             <div class="carousel-caption">
               <h1><strong>Naval Architecture & Ocean Engineering</strong></h1>
-                    <h3>The field of ocean engineering provides an important link between the structural engineering and fluid mechanics. Ocean Engineering is an interdisciplinary field of engineering dealing with research and development, design, analysis, testing, operation and maintenance of structures, marine vehicles and other systems in coastal and offshore environments.
+                    <h3>The field of ocean engineering provides an important link between the structural engineering and fluid mechanics. Ocean Engineering is an interdisciplinary field of engineering dealing with research and development.
                       <a class="slider_btn" href="http://www.doe.iitm.ac.in//">  
                         <button type="button" class="btn btn-warning">
                     Know More
@@ -204,10 +204,6 @@
                     </h3>
             </div>
         </div>
-
-        
-        
-        
 
       </div>
 
@@ -2346,9 +2342,9 @@
     </div>
   </div>
 
-  <div class="footer">
-  <div class='navbar-brand'>© Copyright Institute Webops</div>
-</div>
+  <footer>
+  © Copyright Institute Webops
+</footer>
 
 </body>
 </html>
