@@ -558,7 +558,7 @@ footer {
     height:40px;
 }
 
-.article>p>img{
+.article>p>img,.bt{
   width:100% !important;
   height:40% !important;
   margin:2%;
