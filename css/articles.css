@@ -103,6 +103,15 @@ body, html {
 	margin-top: 0px;
 }
 
+.bt{
+  width:40% !important;
+  height:40% !important;
+  margin:2%;
+  display:inline;
+  float:left;
+  margin-top: 0px;
+}
+
 .article>p{
 	display:inline;
 }
