@@ -10,6 +10,8 @@ $(document).ready(function(){
         $(".navbar-brand").hide();
         $(".jumbotron").show();
         $(".jumbotron").css("width",$(window).width());
+        $(".shadow-lg").addClass("left");
+        $(".shadow-lg").removeClass("shadow-lg");
 }
   $("#departments li").click(function() {
   	var active = $(".course-active");

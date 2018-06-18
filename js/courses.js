@@ -20,6 +20,7 @@ $(document).ready(function(){
   	$('#'+id).show();
   	 $('#'+id).addClass('course-active');
   	 $('#courses').html(depart);
+     $("footer").css("margin-top","0px")
   }
   	);
 
