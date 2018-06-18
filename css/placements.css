@@ -63,25 +63,26 @@ body,html{
     text-align: left;
 }
 
-.left{
+.lef{
   text-align: left;
 }
 .bg-white {
     background-color: #fff!important;
 }
 
-  .carousel,.item,.active{height:100%;}
+.carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
 .carousel-inner > .item > img {
     margin: 0 auto;
-    width:100%;
+    min-width:100%;
     height:100%;
+    padding: 0% !important;
 }
 .carousel-caption{
+  padding-left:2%;
   background-color: rgba(0,0,0,0.5);
   font-family: Montserrat, sans-serif;
 }
-
 
  #myInput {
     padding: 20px;
@@ -245,6 +246,10 @@ footer {
 
     footer{
       margin-top:10%;
+    }
+
+    .lef{
+      padding-top:5%;
     }
 
   }

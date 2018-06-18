@@ -10,6 +10,8 @@ $(document).ready(function(){
         $(".navbar-brand").hide();
         $(".jumbotron").show();
         $(".jumbotron").css("width",$(window).width());
+        $(".shadow-lg").addClass("lef");
+        $(".shadow-lg").removeClass("shadow-lg");
 }
   $("#departments li").click(function() {
   	var active = $(".course-active");
@@ -20,7 +22,8 @@ $(document).ready(function(){
   	$('#'+id).show();
   	 $('#'+id).addClass('course-active');
   	 $('#courses').html(depart);
-     $("footer").css("margin-top","0px")
+     $("footer").css("margin-top","0px");
+     $("#department").html(depart);
   }
   	);
 
